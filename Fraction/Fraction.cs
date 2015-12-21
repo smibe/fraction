@@ -17,7 +17,7 @@ namespace TddTraining
 
         public static Fraction operator +(Fraction first, Fraction second)
         {
-            return new Fraction(first.Nominator + second.Nominator, first.Denominator);
+            return new Fraction(first.Nominator * second.Denominator + first.Denominator * second.Nominator, first.Denominator * second.Denominator);
         }
 
         public override string ToString()
