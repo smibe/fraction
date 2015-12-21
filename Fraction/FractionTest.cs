@@ -20,7 +20,7 @@ namespace TddTraining
         }
 
         [TestMethod]
-        public void AddTwoFractionsWithEqualDenominator ()
+        public void AddTwoFractionsWithEqualDenominator()
         {
             Assert.AreEqual(F(4, 5), F(1, 5) + F(3, 5));
         }
@@ -35,6 +35,13 @@ namespace TddTraining
         public void AddTwoFractionsWithDifferentDenominator()
         {
             Assert.AreEqual(F(19, 15), F(2, 3) + F(3, 5));
+        }
+
+        [TestMethod]
+        public void AcceptanceTest()
+        {
+            Assert.AreEqual(F(4, 3), F(2, 3) + F(6, 9));
+            Assert.AreEqual(F(2 * 3 * 5 * 11 + 7 * 3, 7* 11), F(2 * 3 * 5 * 11 * 3, 3 * 11 * 7) + F(3 * 2, 11 * 2));
         }
 
         public Fraction F(int nominator, int denominator = 1)
