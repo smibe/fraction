@@ -25,6 +25,12 @@ namespace TddTraining
             Assert.AreEqual(F(4, 5), F(1, 5) + F(3, 5));
         }
 
+        [TestMethod]
+        public void ReduceFractions()
+        {
+            Assert.AreEqual(F(4, 5), F(4 * 2, 5 * 2));
+        }
+
         public Fraction F(int nominator, int denominator = 0)
         {
             return new Fraction(nominator, denominator);

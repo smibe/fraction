@@ -8,6 +8,8 @@ namespace TddTraining
         {
             Nominator = nominator;
             Denominator = denominator;
+
+            Reduce();
         }
 
         public int Nominator { get; set; }
@@ -32,5 +34,18 @@ namespace TddTraining
             }
             return this.Nominator == fraction.Nominator; 
         }
+
+        private void Reduce()
+        {
+            for (int divisor = 2; divisor < Math.Max(Nominator, Denominator); divisor++)
+            {
+                if (Nominator % divisor == 0 && Denominator % divisor == 0)
+                {
+                    Nominator /= divisor;
+                    Denominator /= divisor;
+                }
+            }
+        }
+
     }
 }
